@@ -260,70 +260,29 @@
 
         /* Media query for smaller screens (e.g., mobile) */
         @media (max-width: 768px) {
-            body{
-                flex-direction: column; /* Stack elements vertically on small screens */
-                justify-content: flex-start;
-                padding-top: 20px; /* Add padding to top of body to prevent content from being hidden under the address bar */
-            }
             #howToPlay {
                 display: none; /* Hide instructions on small screens to save space */
             }
-            #gameContainer {
-                width: 100%;
-                height: auto;
-                align-items: center;
-                padding: 10px 0;
+            #scoreBoard {
+                position: static; /* Scoreboard becomes static in uiBar */
             }
-            #uiBar{
-                width: 95%;
-                padding: 5px 0;
+            #pauseButton {
+                position: static; /* Pause Button becomes static in uiBar */
+            }
+             #uiBar {
+                max-width: 95%; /* Adjust uiBar width for smaller screens */
             }
             #gameCanvas {
-                width: 85vw;
-                height: 85vw;
-                max-width: 85;
-                max-height: 85vw;
+                width: 95vw;  /* Canvas takes up more viewport width */
+                height: 95vw; /* Canvas is square, so height same as width */
+                max-width: 95vw; /* Ensure it doesn't exceed viewport width */
+                max-height: 95vw;
             }
             #touchControls {
-                position: fixed;
-                bottom: 40px;
-                left: 0;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
+                display: block; /* Ensure touch controls are shown on small screens if JS detects touch */
             }
-            .touchButtonRow{
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-                margin: 5px 0;
-            }
-            .touchButton{
-                width: 80px;
-                height: 80px;
-                background-color: rgba(0, 0, 0, 0.7);
-                border: 2px solid rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
-                color: white;
-                font-size: 32px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0;
-                cursor: pointer;
-                -webkit-tap-highlight-color: transparent;
-            }
-            .touchButtonRow:last-child{
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-                padding: 0 20px;
-            }
-            .touchButton:active{
-                transform: scale(0.9);
-                background-color: rgba(0, 0, 0, 0.9);
+            #gameContainer {
+                align-items: stretch; /* Stretch game container to full viewport width on small screens */
             }
         }
 
