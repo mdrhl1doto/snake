@@ -22,10 +22,6 @@ Click the "Start Game" button to begin.  Control the snake to eat the yellow foo
 *   **Bonus Food:**  Occasionally, pink bonus food will appear, offering extra points when eaten.
 *   **(Intended Feature) High Score:**  The game is designed to eventually include a high score feature that saves your best score even after you close the browser.
 
-## Credits
-
-Developed by MDRHL1.0 (or your name if you prefer!)
-
 ## Technologies Used
 
 *   HTML5
