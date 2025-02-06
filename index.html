@@ -260,29 +260,53 @@
 
         /* Media query for smaller screens (e.g., mobile) */
         @media (max-width: 768px) {
+            body{
+                flex-direction: column; /* Stack elements vertically on small screens */
+                justify-content: flex-start;
+                padding-top: 20px; /* Add padding to top of body to prevent content from being hidden under the address bar */
+            }
             #howToPlay {
                 display: none; /* Hide instructions on small screens to save space */
             }
-            #scoreBoard {
-                position: static; /* Scoreboard becomes static in uiBar */
+            #gameContainer {
+                width: 100%;
+                height: auto;
+                align-items: center;
+                padding: 10px 0;
             }
-            #pauseButton {
-                position: static; /* Pause Button becomes static in uiBar */
-            }
-             #uiBar {
-                max-width: 95%; /* Adjust uiBar width for smaller screens */
+            #uiBar{
+                width: 95%;
+                padding: 5px 0;
             }
             #gameCanvas {
-                width: 95vw;  /* Canvas takes up more viewport width */
-                height: 95vw; /* Canvas is square, so height same as width */
-                max-width: 95vw; /* Ensure it doesn't exceed viewport width */
-                max-height: 95vw;
+                width: 85vw;
+                height: 85vw;
+                max-width: 85;
+                max-height: 85vw;
             }
             #touchControls {
-                display: block; /* Ensure touch controls are shown on small screens if JS detects touch */
+                position: fixed;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: none;
+                padding: 10px;
             }
-            #gameContainer {
-                align-items: stretch; /* Stretch game container to full viewport width on small screens */
+            .touchButtonRow{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin: 5px 0;
+            }
+            .touchButton{
+                width: 60px;
+                height: 60px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border: 2px solid rgba(0, 0, 0, 0.3);
+                font-size: 24px;
             }
         }
 
